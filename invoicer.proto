@@ -1,0 +1,17 @@
+syntax = "proto3";
+option go_package = "github.com/trigo-William-HOANG/project-root/backend/invoicer";
+
+
+package invoicer;
+
+service Invoicer {
+  rpc GetInvoice(InvoiceRequest) returns (InvoiceResponse);
+}
+
+message InvoiceRequest {
+  string id = 1;
+}
+
+message InvoiceResponse {
+  string invoiceJson = 1;  // JSON response string
+}
