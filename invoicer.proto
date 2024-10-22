@@ -1,6 +1,5 @@
 syntax = "proto3";
-option go_package = "github.com/trigo-William-HOANG/project-root/backend/invoicer";
-
+option go_package = "github.com/trigo-William-HOANG/projectroot/backend/invoicer";
 
 package invoicer;
 
@@ -12,6 +11,14 @@ message InvoiceRequest {
   string id = 1;
 }
 
+message App {
+  string idApp = 1;
+  string nameApp = 2;
+  string descriptionApp = 3;
+  string appUrl = 4;
+  string imageAppUrl = 5;
+}
+
 message InvoiceResponse {
-  string invoiceJson = 1;  // JSON response string
+  repeated App apps = 1;  // Return multiple apps
 }
